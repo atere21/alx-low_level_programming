@@ -1,46 +1,34 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
-/* betty style doc for function main goes there */
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success)
+ * main - program that prints all possible different combinations of two digits
+ * Numbers must be separated by ,followed by a space
+ * The two digits must be different
+ * 01 and 10 are considered the same combination of the two digits 0 and 1
+ * Return: 0
  */
+
 int main(void)
 {
-int i;
-int j;
-
-i = 48;
-j = 49;
-while  ((i < 57) && (j < 58))
+int n1 = 48;
+int n2;
+int com = 44;
+while (n1 <= 57)
 {
-putchar(i);
-putchar(j);
-if ((i == 56) && (j == 57))
+n2 = n1 + 1;
+while (n2 <= 57)
 {
-putchar(n);
-i++;
-j++;
-}
-else
+putchar(n1);
+putchar(n2);
+if (n1 != 56 || n2 != 57)
 {
-putchar(44);
+putchar(com);
 putchar(32);
-if (j < 57)
-{
-j++;
 }
-else
-{
-i++;
-j = 1 + i;
+n2 += 1;
 }
+n1 += 1;
 }
-
-}
-
+putchar('\n');
 return (0);
 }
