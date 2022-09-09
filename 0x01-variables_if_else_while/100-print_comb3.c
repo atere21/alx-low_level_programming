@@ -1,8 +1,6 @@
+#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
-
-/* betty style doc for function main goes there */
 /**
  * main - Entry point
  *
@@ -10,37 +8,21 @@
  */
 int main(void)
 {
-int i;
-int j;
+	int d;
 
-i = 48;
-j = 49;
-while  ((i < 57) && (j < 58))
-{
-putchar(i);
-putchar(j);
-if ((i == 56) && (j == 57))
-{
-putchar(n);
-i++;
-j++;
-}
-else
-{
-putchar(44);
-putchar(32);
-if (j < 57)
-{
-j++;
-}
-else
-{
-i++;
-j = 1 + i;
-}
-}
-
-}
-
-return (0);
+	for (d = 0; d < 90; d++)
+	{
+		for ()
+		{
+			putchar((d / 10) + '0');
+			putchar((d % 10) + '0');
+		}
+		if (d != 89)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
+	return (0);
 }
