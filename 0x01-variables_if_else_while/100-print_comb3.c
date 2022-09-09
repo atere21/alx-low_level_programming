@@ -1,41 +1,46 @@
-#include<stdio.h>
+#include <stdlib.h>
+#include <time.h>
+#include <stdio.h>
 
+/* betty style doc for function main goes there */
 /**
- * main - print combos without repeats
+ * main - Entry point
  *
- * Return: 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-int f = 0;
-int s = 0;
+int i;
+int j;
 
-while (f <= 9)
+i = 48;
+j = 49;
+while  ((i < 57) && (j < 58))
 {
-s = 0;
-while (s <= 9)
+putchar(i);
+putchar(j);
+if ((i == 56) && (j == 57))
 {
-if (s == f)
-{
-}
-else if (f > s)
-{
+putchar(n);
+i++;
+j++;
 }
 else
 {
-putchar(f);
-putchar(s);
-if (s == 9 && f == 8)
+putchar(44);
+putchar(32);
+if (j < 57)
 {
-break;
+j++;
 }
-putchar(,);
-putchar( );
+else
+{
+i++;
+j = 1 + i;
 }
-s++;
 }
-f++;
+
 }
-putchar(n);
+
 return (0);
 }
