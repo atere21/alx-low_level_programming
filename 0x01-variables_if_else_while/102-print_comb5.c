@@ -1,41 +1,46 @@
-#include<stdio.h>
+#include <stdio.h>
+
 /**
- * main - print two two digit combos
- *
- * Return: 0
- */
+  * main - Prints 3 combination of numbers
+  *
+  * Return: Always (Success)
+  */
 int main(void)
 {
-int i = 0, j = 0;
-int f, s, t, l;
+	int c, i, k, j;
 
-while (i < 100)
-{
-f = i / 10;
-s = i % 10;
-j = 0;
-while (j < 100)
-{
-t = j / 10;
-l = j % 10;
-if (i < j && i != j)
-{
-putchar(f + 0);
-putchar(s + 0);
-putchar( );
-putchar(t + 0);
-putchar(l + 0);
-if (i == 98 && j == 99)
-{
-break;
-}
-putchar(,);
-putchar( );
-}
-j++;
-}
-i++;
-}
-putchar(n);
-return (0);
+	for (c = 48; c <= 57; c++)
+	{
+		for (i = 48; i <= 57; i++)
+		{
+			for (k = 48; k <= 57; k++)
+			{
+				for (j = 48; j <= 57; j++)
+				{
+					if (((k + j) > (c + i) &&  k >= c) || c < k)
+					{
+						putchar(c);
+						putchar(i);
+						putchar(' ');
+						putchar(k);
+						putchar(j);
+
+					if (c + i + k + j == 227 && c == 57)
+					{
+					break;
+					}
+					else
+					{
+					putchar(',');
+					putchar(' ');
+					}
+					}
+				}
+			}
+		}
+	}
+
+	putchar('\n');
+
+	return (0);
 }
