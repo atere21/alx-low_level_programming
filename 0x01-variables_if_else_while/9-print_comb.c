@@ -1,24 +1,25 @@
-#include<stdio.h>
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
- * main - pritn single digit numbers
+ * main - Entry point
  *
- * Return: 0
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-int n = 0;
+	int d;
 
-while (n <= 9)
-{
-putchar(n);
-if (n < 9)
-{
-putchar(,);
-putchar( );
-}
-n++;
-}
-putchar(n);
-return (0);
+	for (d = '0'; d <= '9'; d++)
+	{
+		putchar(d);
+		if (d != '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
+	}
+	putchar('\n');
+
+	return (0);
 }
