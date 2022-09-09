@@ -1,52 +1,48 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
+#include<stdio.h>
 
-/* betty style doc for function main goes there */
 /**
- * main - Entry point
+ * main - print unique 3 digit combos
  *
- * Return: Always 0 (Success)
+ * Return: 0
  */
 int main(void)
 {
-int i;
-int j;
-int k;
+	int f = '0';
+	int s = '0';
+	int t = '0';
 
-i = 48;
-j = 49;
-k = 50;
-while  ((i < 56) && (j < 57) && (k < 58))
-{
-putchar(i);
-putchar(j);
-putchar(k);
-if ((i == 55) && (j == 56) && (k == 57))
-{
-putchar(n);
-i++;
-j++;
-k++;
-}
-else
-{
-putchar(44);
-putchar(32);
-if (k < 57)
-{
-k++;
-}
-else if ((j < 56) && (k == 57))
-{
-k = 1 + ++j;
-}
-else
-{
-j = 1 + ++i;
-k = 1 + j;
-}
-}
-}
-return (0);
+	while (f <= '9')
+	{
+		s = '0';
+		while (s <= '9')
+		{
+			t = '0';
+			while (t <= '9')
+			{
+				if (f == s || f == t || s == t)
+				{
+				}
+				else if (f > s || f > t || s > t)
+				{
+				}
+				else
+				{
+					putchar(f);
+					putchar(s);
+					putchar(t);
+					if (f == '7' && s == '8' && t == '9')
+					{
+						break;
+					}
+					putchar(',');
+					putchar(' ');
+				}
+				t++;
+			}
+			s++;
+		}
+		f++;
+	}
+	putchar('\n');
+	return (0);
 }
