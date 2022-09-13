@@ -1,4 +1,4 @@
-include "main.h"
+include "3-islower.c"
 /**
  * _islower - a function that checks for lowercase character
  * @c: single letter input
