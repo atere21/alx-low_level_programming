@@ -1,17 +1,19 @@
-#include "_ putchar.h"
+#include "main.h"
 /**
- * main - prints the string "Holberton" from a character array.
- * Return: 0 on success.
+ * main - Write a program that prints putchar, followed by a new line.
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char c[] = "_ putchar";
-	int i;
+	char *sh = "main";
 
-	for (i = 0; i < 9; i++)
+	while (*sh)
 	{
-		_putchar(c[i]);
+		_putchar(*sh);
+		sh++;
 	}
 	_putchar('\n');
+
 	return (0);
 }
