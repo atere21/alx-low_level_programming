@@ -1,11 +1,11 @@
 #include <stdio.h>
 /**
  * main - Write a program that prints putchar, followed by a new line.
- *
  * Return: Always 0 (Success)
  */
 int main(void)
-{	putchar('_');
+{
+	putchar('_');
         putchar('p');
         putchar('u');
         putchar('t');
@@ -14,5 +14,5 @@ int main(void)
         putchar('a');
         putchar('r');
         putchar('\n');
-	return (0); 
+	return (0);
 }
