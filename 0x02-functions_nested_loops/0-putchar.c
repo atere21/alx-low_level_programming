@@ -1,4 +1,4 @@
-include = <studio.h>
+#include "main.h"
 /**
  * main - Write a program that prints putchar, followed by a new line.
  *
