@@ -4,10 +4,10 @@
  * @c: single letter input
  * Return: 1 if int c is lowercase, 0 if otherwise
  */
-int _islower(int c)
+int _islower(int c);
 
-int r;
-
+{int r;
+}
 	r = _islower(n);
 	_putchar(r + '0');
 	_putchar('\n');
