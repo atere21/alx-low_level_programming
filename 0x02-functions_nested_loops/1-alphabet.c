@@ -4,7 +4,7 @@
  *
  * Return: Always 0 (Succes)
  */
-void putchar_alphabet(void)
+void print_alphabet(void)
 {
 	int n;
 
