@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-
-
-
-=======
-#include "main.h"
+#include <stdio.h>
 /**
   * _islower - Checks for lowercase character
   * @c: The character to be checked
@@ -19,4 +14,3 @@ return (1);
 else
 return (0);
 }
->>>>>>> be2a2ff97a5d5071e725678622de11f0fa22450a
