@@ -6,14 +6,14 @@ include = <studio.h>
  */
 int main(void)
 {
-	putchar('_');
-        putchar('p');
-        putchar('u');
-        Putchar('t');
-        Putchar('c');
-        Putchar('h');
-        Putchar('a');
-        Putchar('r');
-        Putchar('\n');
+	_putchar('_');
+        _putchar('p');
+        _putchar('u');
+        _putchar('t');
+        _putchar('c');
+        _putchar('h');
+        _putchar('a');
+        _putchar('r');
+        _putchar('\n');
 	return (0); 
 }
