@@ -1,23 +1,20 @@
-<<<<<<< HEAD
-void print_alphabet_x10(void);
-=======
 #include <stdio.h>
 /**
- * print_alphabet_x10 -  prints the alphabet x10
- *
- */
+  * print_alphabet_x10 - Make alphabet x10 times
+  *
+  * Return: void
+  */
 void print_alphabet_x10(void)
 {
-	int alpha;
-	int alpha2;
-
-	for (alpha = 0; alpha <= 9; alpha++)
-	{
-		for (alpha2 = 'a'; alpha2 <= 'z'; alpha2++)
-		{
-			_putchar(alpha2);
-		}
-		_putchar('\n');
+int n, co;
+co = 0;
+while (co < 10)
+{
+for (n = 'a'; n <= 'z'; n++)
+{
+putchar(n);
+}
+co++;
+putchar('\n');
 	}
 }
->>>>>>> 506bcd6d845bb8762bc888258e64a5e44097459e
