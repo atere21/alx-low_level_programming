@@ -4,10 +4,10 @@ include "main.h"
  *
  * Return: Always 0 (Success)
  */
-int main(void)
+int main(void);
 {
 	putchar('_');
-        putchar('P');
+        putchar('p');
         putchar('u');
         Putchar('t');
         Putchar('c');
