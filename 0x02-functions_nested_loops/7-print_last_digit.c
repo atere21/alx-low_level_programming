@@ -1,4 +1,4 @@
-#include "main.h"
+#include 'main.h'
 #include <stdio.h>
 /**
  * print_last_digit - prints last digit of integer input
