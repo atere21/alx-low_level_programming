@@ -12,6 +12,6 @@ if (pld < 0)
 {
 pld = (-1 * pld);
 }
-putchar(pld + '0');
+_putchar(pld + '0');
 return (pld);
 }
