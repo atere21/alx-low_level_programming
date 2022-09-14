@@ -13,6 +13,6 @@ if (pld < 0)
 {
 pld = (-1 * pld);
 }
-_putchar(pld + '0');
+_putchar("\npld + '0'");
 return (pld);
 }
