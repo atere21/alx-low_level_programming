@@ -15,7 +15,7 @@ for (a = 0; a <=  n; a++)
 {
 for (b = 0; b <= n; b++)
 {
-c = a * b; d = c / 100; e = (c /  10) % 10;
+c = a * b; d = c / 100; e = (c / 10) % 10;
 f = (c % 100) % 10;
 if (b == 0)
 {
@@ -23,7 +23,7 @@ putchar('0');
 }
 else if (c < 10)
 {
-putchar(''); putchar('');
+putchar(' '); putchar(' ');
 putchar('0' + f);
 }
 else if (c < 100)
@@ -39,11 +39,11 @@ putchar('0' + f);
 }
 if (b < n)
 {
-putchar(','); putchar('');
+putchar(','); putchar(' ');
 }
 else
 putchar('\n');
-}
-}
-}
-}
+          }
+}   
+}  
+  }
