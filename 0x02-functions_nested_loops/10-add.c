@@ -1,10 +1,11 @@
 #include "main.h"
 /**
-* a function that adds two integers
-*
-* and returns the result.
-*/
-int add(int a, int b)
+ * add - a function that adds two integers and returns the result
+ * @one: first number input
+ * @two: second number input
+ * Return: one + two
+ */
+int add(int one, int two)
 {
-return (a + b);
+	return (int one + int two);
 }
