@@ -4,7 +4,7 @@
 /**
  * print_last_digit - prints last digit of integer input
  * @n: integer to modify
- * Return: l
+ * Return: Always l.
  */
 
 int print_last_digit(int n)
