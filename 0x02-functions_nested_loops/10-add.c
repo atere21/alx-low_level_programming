@@ -1,10 +1,20 @@
-#include "main.h"
+#include "holberton.h"
 #include <stdio.h>
+
 /**
- * add -> A function that adds two integers and returns the result
- * @one: first number input
- * @two: second number input
- * Return: one + two
+ * add - Sums two integers and
+ * return the result.
+ *
+ * @num1: integer one.
+ * @num2: integer two.
+ *
+ * Return: Sum of the two integers
  */
-int add(int one, int two)
-{return (one + two);}
+
+int add(int num1, int num2)
+{
+
+	int sum = num1 + num2;
+
+	return (sum);
+}
