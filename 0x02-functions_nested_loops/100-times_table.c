@@ -43,7 +43,7 @@ putchar(','); putchar(' ');
 }
 else
 putchar('\n');
-          }
+}
 }   
 }  
-  }
+}
