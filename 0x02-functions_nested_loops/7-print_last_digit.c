@@ -5,7 +5,7 @@
  * @nld: number's last digit result
  * Return: value of the last digit
  */
-int print_last_digit(int)
+int print_last_digit(int pld)
 {
 	int pld;
 	pld = (nld % 10);
