@@ -23,7 +23,7 @@ putchar('0');
 }
 else if (c < 10)
 {
-putchar(', '); putchar(', ');
+putchar(''); putchar('');
 putchar('0' + f);
 }
 else if (c < 100)
@@ -39,7 +39,7 @@ putchar('0' + f);
 }
 if (b < n)
 {
-putchar(','); putchar(' ');
+putchar(','); putchar('');
 }
 else
 putchar('\n');
