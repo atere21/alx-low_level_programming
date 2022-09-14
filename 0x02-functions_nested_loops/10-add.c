@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * add -> A function that adds two integers and returns the result
  * @one: first number input
@@ -6,6 +7,4 @@
  * Return: one + two
  */
 int add(int one, int two)
-{
-return (one + two);
-}
+{return (one + two);}
