@@ -1,14 +1,20 @@
-#include <stdio.h>
+#include "main.h"
 /**
- * _islower - checks for lowercase letters
- * @c: character to check
- *
- * Return: 0 or 1
+ * print_last_digit - a function that prints the last digit of a number
+ * @nld: number's last digit result
+ * Return: value of the last digit
  */
-int _islower(int c)
+int print_last_digit(int nld)
 {
-if (c >= 'a' && c <= 'z')
-return (1);
-else
-return (0);
+	int pld;
+
+	pld = (nld % 10);
+
+	if (pld < 0)
+	{
+		pld = (-1 * pld);
+	}
+
+	_putchar(pld + '0');
+	return (pld);
 }
