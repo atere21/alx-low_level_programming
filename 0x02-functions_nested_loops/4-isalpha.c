@@ -1,24 +1,15 @@
-include "main.h"
+#include "main.h"
+
 /**
- * print_sign - a function that prints the sign of a number
- * @n: number input
- * Return: 1 prints '+' if n > 0, 0 prints '0' if n = 0, -1 prints '-' if n < 0
+ * _isalpha - checks for alphabetic characters
+ * @c: character to check
+ *
+ * Return: 0 or 1
  */
-int print_sign(int n)
+int _isalpha(int c)
 {
-	if (n > 0)
-	{
-		_putchar ('+');
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
-	}
-	else if (n == 0)
-	{
-		_putchar ('0');
-		return (0);
-	}
 	else
-	{
-		_putchar ('-');
-		return (-1);
-	}
+		return (0);
 }
