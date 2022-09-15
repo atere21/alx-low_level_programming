@@ -1,21 +1,17 @@
-<<<<<<< HEAD
-=======
 #include "main.h"
 
 /**
-  * print_numbers - Print the numbers since 0 up to 9
-  *
-  * Return: The numbers since 0 up to 9
-  */
+ * print_numbers -  checks for checks for a digit (0 through 9).
+ *
+ * Return: Always 0.
+ */
 void print_numbers(void)
 {
-	int b;
+int a;
 
-	for (b = 0; b <= 9; b++)
-	{
-		 putchar(b + '0');
-	}
-
-	 putchar('\n');
+for (a = 48; a < 57; a++)
+{
+putchar(a);
 }
->>>>>>> e15e130af378a8f2140a8add444a591f5bcca4ae
+putchar(“\n”);
+}
