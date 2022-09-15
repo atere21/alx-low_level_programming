@@ -3,7 +3,7 @@
  /**
  * print_numbers -  checks for checks for a digit (0 through 9).
  *
- * Return: Always 0.
+ * Return: Always void.
  */
 void print_numbers(void)
 {
@@ -11,7 +11,7 @@ void print_numbers(void)
 
 	for (a = 48; a < 57; a++)
 	{
-		 putchar(a);
+	 putchar(a);
 	}
 	 putchar('\n');
 }
