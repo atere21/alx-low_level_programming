@@ -4,7 +4,7 @@
 /**
  * print_numbers - prints 0123456789\n
  *
- * Return: void
+ * Return: 0
  */
 
 
@@ -17,4 +17,5 @@ void print_numbers(void)
 		_putchar(c);
 	}
 	_putchar('\n');
+        return (0);
 }
