@@ -5,19 +5,20 @@
  * _putchar only 3 times
  * Return: 0-14 x10 followed by new line
  */
+
 void more_numbers(void)
 {
-	int i, ro;
+	int a, b;
 
-	for (ro = 0; ro < 10; ro++)
+	for (a = 0; a < 10; a++)
 	{
-		for (i = 0; i <= 14; i++)
+		for (b = 0; b < 15; b++)
 		{
-			if (i >= 10)
+			if (b / 10 != 0)
 			{
-				_putchar((i / 10) + '0');
+				_putchar(b / 10 + '0');
 			}
-			_putchar((i % 10) + '0');
+			_putchar(b % 10 + '0');
 		}
 		_putchar('\n');
 	}
