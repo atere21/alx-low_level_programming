@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * print_number - takes an integer and prints it with _putchar
@@ -20,27 +21,27 @@ a6 = (n / 1000) % 10; s6 = s5 + a6; a7 = (n / 100) % 10; s7 = s6 + a7;
 a8 = (n / 10) % 10; s8 = s7 + a8; a9 = n % 10;
 if (n < 0)
 {
-_putchar(-);
+putchar(-);
 a0 *= -1; a1 *= -1; a2 *= -1; a3 *= -1; a4 *= -1;
 a5 *= -1; a6 *= -1; a7 *= -1; a8 *= -1; a9 *= -1;
 }
 if (s0 != 0)
-_putchar(0 + a0);
+putchar(0 + a0);
 if (s1 != 0)
-_putchar(0 + a1);
+putchar(0 + a1);
 if (s2 != 0)
-_putchar(0 + a2);
+putchar(0 + a2);
 if (s3 != 0)
-_putchar(0 + a3);
+putchar(0 + a3);
 if (s4 != 0)
-_putchar(0 + a4);
+putchar(0 + a4);
 if (s5 != 0)
-_putchar(0 + a5);
+putchar(0 + a5);
 if (s6 != 0)
-_putchar(0 + a6);
+putchar(0 + a6);
 if (s7 != 0)
-_putchar(0 + a7);
+putchar(0 + a7);
 if (s8 != 0)
-_putchar(0 + a8);
-_putchar(0 + a9);
+putchar(0 + a8);
+putchar(0 + a9);
 }
