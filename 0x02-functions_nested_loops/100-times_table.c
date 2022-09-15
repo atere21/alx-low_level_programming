@@ -22,19 +22,32 @@ putchar('0');
 }
 else if (c < 10)
 {
-putchar(' '); putchar(' ');
+putchar(' ');
+putchar(' ');
 putchar('0' + f);
 }
 else if (c < 100)
 {
 putchar(' ');
+
+putchar('\n');
+
 putchar('0' + e); putchar('0' + f);
 }
 else
 {
 putchar('0' + d);
+
+putchar('\n');
+
 putchar('0' + e);
+
+putchar('\n');
+
 putchar('0' + f);
+
+putchar('\n');
+
 }
 if (b < n)
 {
