@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -6,7 +7,6 @@
  *
  * Return: 0 or 1
  */
-
 
 int _islower(int c)
 {
