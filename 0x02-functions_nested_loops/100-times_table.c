@@ -1,8 +1,8 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
 * print_times_table - print times tables from zero to n
-*
 * @n: integer
 */
 
@@ -16,35 +16,35 @@ while (a <= n)
 {
 int b = 1;
 
-putchar('0');
+_putchar('0');
 while (b <= n)
 {
 int p = a * b;
 
-putchar(',');
-putchar(' ');
+_putchar(',');
+_putchar(' ');
 if (p < 10)
 {
-putchar(' ');
-putchar(' ');
-putchar(p + '0');
+_putchar(' ');
+_putchar(' ');
+_putchar(p + '0');
 }
 else if (p > 99)
 {
-putchar((p / 100) + '0');
-putchar(((p / 10) % 10) + '0');
-putchar((p % 10) + '0');
+_putchar((p / 100) + '0');
+_putchar(((p / 10) % 10) + '0');
+_putchar((p % 10) + '0');
 }
 else
 {
-putchar(' ');
-putchar((p / 10) + '0');
-putchar((p % 10) + '0');
+_putchar(' ');
+_putchar((p / 10) + '0');
+_putchar((p % 10) + '0');
 }
 b++;
 }
-putchar('\n');
+_putchar('\n');
 a++;
 }
 }
-} }
+} 
