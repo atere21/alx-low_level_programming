@@ -16,35 +16,35 @@ while (a <= n)
 {
 int b = 1;
 
-_putchar('0');
+putchar('0');
 while (b <= n)
 {
 int p = a * b;
 
-_putchar(',');
-_putchar(' ');
+putchar(',');
+putchar(' ');
 if (p < 10)
 {
-_putchar(' ');
-_putchar(' ');
-_putchar(p + '0');
+putchar(' ');
+putchar(' ');
+putchar(p + '0');
 }
 else if (p > 99)
 {
-_putchar((p / 100) + '0');
-_putchar(((p / 10) % 10) + '0');
-_putchar((p % 10) + '0');
+putchar((p / 100) + '0');
+putchar(((p / 10) % 10) + '0');
+putchar((p % 10) + '0');
 }
 else
 {
-_putchar(' ');
-_putchar((p / 10) + '0');
-_putchar((p % 10) + '0');
+putchar(' ');
+putchar((p / 10) + '0');
+putchar((p % 10) + '0');
 }
 b++;
 }
-_putchar('\n');
+putchar('\n');
 a++;
 }
 }
-} 
+} }
