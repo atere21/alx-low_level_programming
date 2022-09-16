@@ -1,5 +1,6 @@
 #include "main.h"
 
+
 /**
 * more_numbers - prints 10 times of 1-14
 * Description: Uses headers to link and a nested loops to achieve goal
@@ -18,6 +19,6 @@ void more_numbers(void)
 				putchar('1');
 			putchar((j % 10) + '0');
 		}
-		putchar('\n');
+		 return (0);
 	}
 }
