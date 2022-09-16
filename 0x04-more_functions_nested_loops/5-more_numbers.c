@@ -1,29 +1,23 @@
-#include <stdio.h>
+include "main.h"
 
 /**
- * more_numbers - prints 01234567891011121314\n x10
- *
- * Return: void
- */
-
+* more_numbers - prints 10 lines of 1-14
+* Description: Uses headers to link and a nested loops to achieve goal
+* Return: void. no return.
+*/
 
 void more_numbers(void)
 {
-	char a, b, c, i;
+	int i = 0, j = 0;
 
 	for (i = 0; i < 10; i++)
 	{
-		for (c = 0; c <= 14; c++)
+		for (j = 0; j <= 14; j++)
 		{
-			if (c < 10)
-				b = c;
-			else
-			{
-				a = c / 10; b = c % 10;
-				 putchar(0 + a);
-			}
-			 putchar(0 + b);
+			if (j >= 10)
+				putchar('1');
+			putchar((j % 10) + '0');
 		}
-		 putchar('\n');
+		putchar('\n');
 	}
 }
