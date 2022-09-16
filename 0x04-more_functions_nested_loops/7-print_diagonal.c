@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include <stdio.h>
 
 /**
  * print_line - a function that draws a straight line in the terminal
@@ -11,14 +11,14 @@ int co;
 
 if (n <= 0)
 {
-_putchar(n);
+putchar(n);
 }
 else
 {
 for (co = 1; co <= n; co++)
 {
-_putchar(_);
+putchar(_);
 }
-_putchar(n);
+putchar(n);
 }
 }
