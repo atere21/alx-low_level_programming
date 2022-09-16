@@ -1,5 +1,4 @@
 #include "main.h"
-#include <limits.h>
 
 /**
 * print_number - outputs a number
