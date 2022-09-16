@@ -14,7 +14,7 @@ if (n < 0)
 {
 n *= -1;
 k = n;
- putchar("\n");
+ putchar('-');
 }
 
 k /= 10;
