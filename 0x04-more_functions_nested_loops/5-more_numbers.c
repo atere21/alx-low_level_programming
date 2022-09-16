@@ -1,4 +1,4 @@
-include "main.h"
+include <stdio.h>
 
 /**
 * more_numbers - prints 10 lines of 1-14
