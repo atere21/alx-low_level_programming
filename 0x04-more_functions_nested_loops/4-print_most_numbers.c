@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * print_most_numbers - a function that prints the numbers, from 0 to 9
@@ -7,14 +7,14 @@
  */
 void print_most_numbers(void)
 {
-int i;
+	int h;
 
-for (i = 0; i <= 9; i++)
-{
-if ((i == 2) || (i == 4))
-continue;
-else
-putchar(i + '0');
-}
-putchar('\n');
+	for (h = 0; h <= 9; h++)
+	{
+		if ((h == 2) || (h == 4))
+			continue;
+		else
+			putchar(h + '0');
+	}
+	 putchar('\n');
 }

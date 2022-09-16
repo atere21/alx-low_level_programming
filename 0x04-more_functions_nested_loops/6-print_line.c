@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * print_line - prints an underscore n times
@@ -9,11 +9,11 @@
 
 void print_line(int n)
 {
-	int i;
+int i;
 
-	for (i = 0; i < n; i++)
-	{
-          _putchar('_');
-	}
-	_putchar('\n');
+for (i = 0; i < n; i++)
+{
+putchar('_');
+}
+putchar('\n');
 }
