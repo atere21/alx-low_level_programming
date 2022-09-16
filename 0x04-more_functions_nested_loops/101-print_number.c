@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int _putchar(char c);
+int putchar(char c);
 
 /**
  * print_number - prints numbers
@@ -16,7 +16,7 @@ void print_number(int n)
 	if (n < 0)
 	{
 		n1 = -n;
-		_putchar('-');
+		putchar('-');
 	}
 	else
 	{
@@ -27,5 +27,5 @@ void print_number(int n)
 	{
 		print_number(n1 / 10);
 	}
-	_putchar((n1 % 10) + '0');
+	 putchar((n1 % 10) + '0');
 }
