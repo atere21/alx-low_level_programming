@@ -1,23 +1,17 @@
 #include "main.h"
 
 /**
- * main - entry point
+ * _isupper - checks for uppercase letters
+ * @c: character to check
  *
- * Description: Prints Holberton with _putchar
- *
- * Return: always 0
+ * Return: 0 or 1
  */
 
-int main(void)
-{
-int i = 0;
-char c;
-char s[] = "Holberton\n";
 
-while (i <= 9)
+int _isupper(int c)
 {
-c = s[i];
-_putchar(c);
-i++;
+	if (c >= 'A' && c <= 'Z')
+		return (1);
+	else
+		return (0);
 }
-return (0);
