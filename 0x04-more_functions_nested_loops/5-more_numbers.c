@@ -1,7 +1,7 @@
 include <stdio.h>
 
 /**
-* more_numbers - prints 10 lines of 1-14
+* more_numbers - prints 10 times of 1-14
 * Description: Uses headers to link and a nested loops to achieve goal
 * Return: void. no return.
 */
