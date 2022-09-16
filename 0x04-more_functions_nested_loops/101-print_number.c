@@ -4,7 +4,7 @@
   * print_number - Prints an integer.
   * @n: The integer to prints.
   *
-  * Return: Nothing!
+  * Return: Always 0.
   */
 void print_number(int n)
 {
@@ -23,5 +23,7 @@ void print_number(int n)
 	 print_number(k);
 
 	 putchar((unsigned int) n % 10 + '0');
+          
+          return (0);
 
 }
