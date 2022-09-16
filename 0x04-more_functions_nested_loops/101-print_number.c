@@ -22,7 +22,7 @@ k /= 10;
 
 if (k != 0)
 
-print_number(k);
+putchar(k);
 putchar((unsigned int) n % 10 + '0');
 
 }
