@@ -6,20 +6,20 @@
   *
   * Return: Always 0
   */
-void print_number(int n)
+ void print_number(int n)
 {
-unsigned int k = n;
+ unsigned int k = n;
 
-if (n < 0)
-{
-n *= -1;
-k = n;
-}
+ if (n < 0)
+ {
+ n *= -1;
+ k = n;
+ }
 
-k /= 10;
+ k /= 10;
 
-if (k != 0)
-print_number(k);
+ if (k != 0)
+ print_number(k);
 
  putchar((unsigned int) n % 10 + 0);
 
