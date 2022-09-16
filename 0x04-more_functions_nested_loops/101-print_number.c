@@ -6,6 +6,7 @@
   *
   * Return: Always 0.
   */
+
 void print_number(int n)
 {
 	unsigned int k = n;
@@ -21,9 +22,6 @@ void print_number(int n)
 
 	if (k != 0)
 	 print_number(k);
-
 	 putchar((unsigned int) n % 10 + '0');
-          
-          return (0);
 
 }
