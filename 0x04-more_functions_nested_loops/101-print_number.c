@@ -1,4 +1,3 @@
-21) 101-print_number.c
 #include "main.h"
 void print_integer(int m);
 
