@@ -20,5 +20,5 @@ while (j < i)
 putchar(*(str + j));
 j++;
 }
-putchar(n);
+ putchar('\n');
 }
