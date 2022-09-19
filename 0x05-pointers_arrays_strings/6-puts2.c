@@ -6,7 +6,7 @@
  *
  * Return: void
  */
-void puts2(char *str)
+void puts(n)(char *str)
 {
 int i = 0;
 
