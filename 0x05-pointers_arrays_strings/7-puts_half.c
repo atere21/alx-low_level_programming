@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
  * puts_half - prints the second half of a string
@@ -17,8 +17,8 @@ if (i % 2)
 j += 1;
 while (j < i)
 {
-_putchar(*(str + j));
+putchar(*(str + j));
 j++;
 }
-_putchar(n);
+putchar(n);
 }
