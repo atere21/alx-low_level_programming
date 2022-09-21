@@ -62,4 +62,6 @@ putchar(0 + a7);
 if (s8 != 0)
 putchar(0 + a8);
 putchar(0 + a9);
+putchar('\n');
+return (0);
 }
