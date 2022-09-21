@@ -1,12 +1,13 @@
 #include "main.h"
 
 /**
- * main -function appends the src stri
- * ng to the dest string
- * _strcat - appends src to the dest s * @dest: string to append by src
+ * _strcat - appends src to the dest string
+ * @dest: string to append by src
  * @src: string to append to dest
- * Return: two concat string
+ *
+ * Return: address of dest
  */
+
 char *_strcat(char *dest, char *src)
 {
 	int i, j;
