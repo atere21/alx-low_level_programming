@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * 1-strncat - appends src to the dest string
+ * _strncat - appends src to the dest string
  * @dest: string to append by src
  * @src: string to append
  * @n: largest number of bytes to append
