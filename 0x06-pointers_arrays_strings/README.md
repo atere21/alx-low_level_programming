@@ -1,10 +1,10 @@
-#0x05. C - More pointers, arrays and strings
+# 0x05. C - More pointers, arrays and strings
 
 About
 
 A follow-up project on pointers.
 
-##Requirements
+## Requirements
 
 Ubuntu 14.04
 gcc 4.8.4
