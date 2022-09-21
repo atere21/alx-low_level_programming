@@ -16,8 +16,10 @@ while (*(dest + i))
 i++;
 while ((*(dest + i) = *(src + j)))
 {
+{
 i++;
 j++;
+}
 }
 return (dest);
 }
