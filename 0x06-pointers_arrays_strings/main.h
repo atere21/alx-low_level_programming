@@ -4,5 +4,5 @@
 #include <stdio.h>
 
 char *_strcat(char *dest, char *src);
-
-#endif /* MAaIN_H */
+ar *_strncat(char *dest, char *src, int n);
+#endif /* MAIN_H */
