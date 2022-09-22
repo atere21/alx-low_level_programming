@@ -11,22 +11,24 @@
 
 void print_buffer(char *b, int size);
 {
-	int j, k;
+	int i = 0, j;
 
-	for (j = 0; j <= 9; j++)
+	if (size < 0)
 	{
-		if (j <= s)
-			printf("%02x", c[l * 10 + j]);
-		else
-			_putchar;
-		if (j % 2)
-			_putchar('_');
-	}
-	for (k = 0; k <= s; k++)
-	{
-		if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
-			_putchar(c[l * 10 + k]);
-		else
-			_putchar('\n');
-	}
-}
+		printf('\n');
+		return;
+        }
+	while (i < size)
+        {	
+		if (i % 10 ==0)
+			printf("%08x: ", i);
+                for (j = i; j < i + 9; j += 2)
+	        {
+                 if ((j < size) && ((j + 1) < size))
+                 Printf("%2x%02x: ", b[j], b[j] <= 126)
+			else
+                        { 
+                         while(++j <= i + 10)
+                         printf(" ");
+                         
+                 }
