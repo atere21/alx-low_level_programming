@@ -19,16 +19,16 @@ for (j = 0; j <= 9; j++)
 if (j <= s)
 printf("%02x", c[l * 10 + j]);
 else
-printf("  ");
+printf("_");
 if (j % 2)
-putchar();
+_putchar();
 }
 for (k = 0; k <= s; k++)
 {
 if (c[l * 10 + k] > 31 && c[l * 10 + k] < 127)
-putchar(c[l * 10 + k]);
+_putchar(c[l * 10 + k]);
 else
-putchar(.);
+_putchar(.);
 }
 }
 
@@ -54,7 +54,7 @@ else
 {
 print_line(b, size % 10 - 1, i);
 }
-_putchar(n);
+putchar(n);
 }
 if (size == 0)
-_putchar(n);
+putchar(n);
