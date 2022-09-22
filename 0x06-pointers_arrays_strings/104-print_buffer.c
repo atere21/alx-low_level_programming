@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_line - prints a s bytes of a buffer
@@ -19,7 +18,7 @@ void print_line(char *c, int s, int l)
 		if (j <= s)
 			printf("%02x", c[l * 10 + j]);
 		else
-			printf("  ");
+			_putchar;
 		if (j % 2)
 			_putchar('_');
 	}
