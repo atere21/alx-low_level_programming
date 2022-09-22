@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_number - takes an integer and prints it with _putchar
@@ -43,5 +42,5 @@ void print_number(int n)
 		_putchar('0' + a7);
 	if (s8 != 0)
 		_putchar('0' + a8);
-	        _putchar('0' + a9);
+	_putchar('0' + a9);
 }
