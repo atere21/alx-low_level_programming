@@ -45,22 +45,22 @@ if (n < 0)
                 a9 *= -1;
 	}
 	if (s0 != 0)
-		_putchar('0' + a0);
+	_putchar('0' + a0);
 	if (s1 != 0)
-		_putchar('0' + a1);
+	_putchar('0' + a1);
 	if (s2 != 0)
-		_putchar('0' + a2);
+	_putchar('0' + a2);
 	if (s3 != 0)
-		_putchar('0' + a3);
+	_putchar('0' + a3);
 	if (s4 != 0)
-		_putchar('0' + a4);
+	_putchar('0' + a4);
 	if (s5 != 0)
-		_putchar('0' + a5);
+	_putchar('0' + a5);
 	if (s6 != 0)
-		_putchar('0' + a6);
+	_putchar('0' + a6);
 	if (s7 != 0)
-		_putchar('0' + a7);
+	_putchar('0' + a7);
 	if (s8 != 0)
-		_putchar('0' + a8);
+	_putchar('0' + a8);
 	_putchar('0' + a9);
 }
