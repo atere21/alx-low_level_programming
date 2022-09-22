@@ -19,7 +19,7 @@ for (j = 0; j <= 9; j++)
 if (j <= s)
 printf("%02x", c[l * 10 + j]);
 else
-printf("_");
+printf(" ");
 if (j % 2)
 _putchar();
 }
@@ -54,7 +54,7 @@ else
 {
 print_line(b, size % 10 - 1, i);
 }
-putchar(n);
+_putchar(n);
 }
 if (size == 0)
-putchar(n);
+_putchar(n);
