@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * print_buffer - prints a buffer
@@ -23,8 +22,8 @@ void print_buffer(char *b, int size)
 		{
 			print_line(b, size % 10 - 1, i);
 		}
-		_putchar('\n');
+		putchar('\n');
 	}
 	if (size == 0)
-		_putchar('\n');
+		putchar('\n');
 }
