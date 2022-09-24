@@ -1,6 +1,4 @@
-# ALX-HOLBERTTON Low Level Programming &
-
-Algorithms
+# ALX-HOLBERTTON Low Level Programming & Algorithms
 
 ## Welcome 👩‍💻
 
