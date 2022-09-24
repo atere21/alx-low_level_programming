@@ -60,4 +60,4 @@ Projects
 0x1D-search_algorithms ** Search algorithms project **
 Credits
 
-Work is owned and maintained by Atere Oluwatosin. Credits for group projects are displayed in the respective README.md files.
+## 📌 Work is owned and maintained by Atere Oluwatosin. Credits for group projects are displayed in the respective README.md files.
