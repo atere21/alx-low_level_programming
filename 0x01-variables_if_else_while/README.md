@@ -36,3 +36,10 @@ Write a program that prints all possible combinations of single-digit numbers.
 
 ## 🦋 Task 10. 
 Write a program that prints all possible different combinations of two digits.
+
+## 🦋 Task 11. 
+Write a program that prints all possible different combinations of three digits.
+
+## 🦋 Task 12.
+Write a program that prints all possible combinations of two two-digit numbers
+
