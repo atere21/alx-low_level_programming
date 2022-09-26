@@ -28,13 +28,13 @@ Requirements
 gcc 4.8.4 (-Wall, -Werror, -Wextra, and -pedantic flags)
 Projects
 
-0x00-hello_world
-0x01-variables_if_else_while
-0x02-functions_nested_loops
-0x03-more_functions_nested_loops
-0x04-pointers_arrays_strings
-0x05-pointers_arrays_strings
-0x06-pointers_arrays_strings
-0x07-recursion
+💦 0x00-hello_world
+💦 0x01-variables_if_else_while
+💦 0x02-functions_nested_loops
+💦 0x03-more_functions_nested_loops
+💦 0x04-pointers_arrays_strings
+💦 0x05-pointers_arrays_strings
+💦 0x06-pointers_arrays_strings
+💦 0x07-recursion
 
 ## 📌 Work is owned and maintained by Atere Oluwatosin. Credits for group projects are displayed in the respective README.md files.
