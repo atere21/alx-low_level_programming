@@ -36,11 +36,11 @@ Projects
 
 💦 0x03-debugging 
 
-💦 0x04-pointers_arrays_strings
+💦 0x04-more_functions_nested_loops
 
 💦 0x05-pointers_arrays_strings
 
-💦 0x06-More pointers_arrays_strings
+💦 0x06-More_pointers_arrays_strings
 
 💦 0x07-Even more pointers_arrays_strings
 
