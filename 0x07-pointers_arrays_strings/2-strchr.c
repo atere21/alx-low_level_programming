@@ -1,22 +1,20 @@
 #include "main.h"
 
 /**
- * _strchr - locates a character in a string
- * @s: string to check
- * @c: character to check for
+ * _memset - fills memory with a constant byte
+ * @s: memory space to be filled
+ * @b: byte to fill with
+ * @n: number of spaces to fill
  *
- * Return: pointer to spot in s with c or null
+ * Return: pointer to memory area s
  */
-char *_strchr(char *s, char c)
+char *_memset(char *s, char b, unsigned int n)
 {
-int i;
+unsigned int i;
 
-for (i = 0; *(s + i); i++)
+for (i = 0; i < n; i++)
 {
-if (*(s + i) == c)
-return (s + i);
+*(s + i) = b;
 }
-if (*(s + i) == c)
-return (s + i);
-return (0);
+return (s);
 }
