@@ -1,72 +1,40 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
-
 
 /**
- * _isnumber - checks if string is a number
- * @s: string
+ * main - prints minimum number of coins to make change for an amount of money.
+ * @argc: number of arguments passed to the function
+ * @argv: argument vector of pointers to strings
  *
- * Return: On success 1.
- * If not a number, 0 is returned.
+ * Return: 0 if no errors, else 1
  */
-int _isnumber(char *s)
+int main(int argc, char *argv[])
 {
-int i, check, d;
+	int a, n = 0, i, t;
+	int c[5] = {25, 10, 5, 2, 1};
 
-i = 0, d = 0, check = 1;
-if (*s == -)
-i++;
-for (; *(s + i) != 0; i++)
-{
-d = isdigit(*(s + i));
-if (d == 0)
-{
-check = 0;
-break;
-}
-}
-return (check);
-}
-/**
- * main - Entry point
- *
- * @argc: Counts the number of parameters that go into main
- * @argv: Pointer of array of pointers containing strings entering main
- * Return: Always 0 (Success)
- */
-int main(int argc, char **argv)
-{
-int j, ex, coins, cents, d;
-int c[5] = {25, 10, 5, 2, 1};
-
-ex = 1, j = 0, coins = 0;
-if (argc == 2)
-{
-if (_isnumber(argv[1]))
-{
-ex = 0, cents = atoi(argv[1]);
-if (cents >= 0)
-{
-while (cents != 0)
-{
-d = cents / c[j];
-if (d == 0)
-{
-j++;
-}
-else
-{
-coins += d;
-cents -= (d * c[j]);
-}
-}
-}
-}
-}
-if (ex == 0)
-printf("%i\n", coins);
-else
-printf("%s\n", "Error");
-return (ex);
+	if (argc != 2)
+	{
+		puts("Error");
+		return (1);
+	}
+	a = atoi(argv[1]);
+	if (a <= 0)
+	{
+		puts("0");
+		return (1);
+	}
+	else
+	{
+		for (i = 0; i < 5; i++)
+		{
+			t = a / c[i];
+			a -= t * c[i];
+			n += t;
+			if (a == 0)
+				break;
+		}
+	}
+	printf("%d\n", n);
+	return (0);
 }
