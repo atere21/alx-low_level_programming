@@ -1,19 +1,21 @@
 #include "main.h"
 
 /**
- * _puts - prints a string in stdout
- * @str: string to print
+ * _puts - prints a string
+ * @str: string
  *
- * Return: void
+ * Return: On success 1.
+ * On error, -1 is returned, and errno is set appropriately.
  */
 void _puts(char *str)
 {
-	int i = 0;
+	int i;
 
-	while (*(str + i))
+	i = 0;
+	while (str[i] != '\0')
 	{
-		putchar(*(str + i));
+		_putchar(str[i]);
 		i++;
 	}
-	putchar('\n');
+	_putchar('\n');
 }
