@@ -76,7 +76,7 @@ for (j = l1 - 1; j >= 0; j--)
 tl = i + j + 1;
 mul = (argv[1][j] - 0) * (argv[2][i] - 0) + ten;
 ten =  mul / 10;
-add = (res[tl] - 0) + (mul % 10) + ten2;
+add = (res[tl] - 0) + (mul % 10) +ten2;
 ten2 = add / 10;
 res[tl] = (add % 10) + 0;
 }
