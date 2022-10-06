@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <ctype.h>
+
 /**
  * _isnumber - checks if string is number
  *
@@ -9,10 +10,10 @@
  *
  * Return: 1 if number, 0 if not
  */
+
 int _isnumber(char *s)
 {
 int i, check, d;
-
 d = 0, check = 1;
 for (i = 0; *(s + i) != 0; i++)
 {
@@ -33,11 +34,11 @@ return (check);
  *
  * Return: pointer
  */
+
 char *_callocX(unsigned int nmemb)
 {
 unsigned int i;
 char *p;
-
 p = malloc(nmemb + 1);
 if (p == 0)
 return (0);
@@ -54,11 +55,11 @@ return (p);
  * @argv: cmd line args
  * Return: No return
  */
+
 int main(int argc, char **argv)
 {
 int i, j, l1, l2, lful, mul, add, ten, ten2, tl, zer = 0;
 char *res;
-
 if (argc != 3 || _isnumber(argv[1]) == 0 || _isnumber(argv[2]) == 0)
 printf("Error\n"), exit(98);
 if (atoi(argv[1]) == 0 || atoi(argv[2]) == 0)
