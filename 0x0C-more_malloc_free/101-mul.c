@@ -1,6 +1,7 @@
-#include "main.h"
+#include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <ctype.h>
 
 /**
  * _print - moves a string one place to the left and prints the string
