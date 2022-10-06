@@ -80,7 +80,7 @@ add = (res[tl] - 0) + (mul % 10) + ten2;
 ten2 = add / 10;
 res[tl] = (add % 10) + 0;
 }
-res[tl - 1] = (ten + ten2) + 0;
+res[tl - 1] = (ten + ten2)+ 0;
 }
 if (res[0] == 0)
 zer = 1;
