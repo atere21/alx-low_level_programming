@@ -1,5 +1,5 @@
-#include <stdlib.h>
 #include "function_pointers.h"
+#include <stdlib.h>
 
 /**
  * print_name - writes the character c to stdout
@@ -10,6 +10,6 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
-if (!name || !f)
-f(name);
+	if (f != 0)
+		f(name);
 }
