@@ -1,4 +1,4 @@
-#include "main.h"
+#include "functions_pointer.h"
 
 /**
  * print_name - writes the character c to stdout
