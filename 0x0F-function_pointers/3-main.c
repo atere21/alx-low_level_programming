@@ -35,7 +35,7 @@ printf("Error\n");
 exit(99);
 }
 
-if ((*get_op == / || *get_op == %) &&(*argv[3] == 0))
+if ((*get_op == / || *get_op == %) && (*argv[3] == 0))
 {
 printf("Error\n");
 exit(100);
