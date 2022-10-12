@@ -1,49 +1,34 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
 /**
- * main - get_op_func has operators correlated with
- * func signs and funcs from op_func
- * if not 4 arguments, return Error & exit 98
- * if op is null, return Error & exit 99
- * if div or mod 0, return Error & exit 100
- * run calc, input one, operator, input two = pointer res to get_op
- * @argc: arguments
- * @argv: double pointer to arguments
- * Return: 0
+ * main - program that performs simple operations
+ *
+ * @argc: Counts the number of parameters that go into main
+ * @argv: Pointer of array of pointers containing strings entering main
+ *
+ * Return: No element matches -1, if size <=0 -1
+ * else index of first element cmp func does not rtrn 0
  */
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-int one, two, ans;
-int (*res)(int, int);
-char *get_op;
+	int res;
+	int (*func)(int, int);
 
-if (argc != 4)
-{
-printf("Error\n");
-exit(98);
-}
+	if (argc != 4)
+		printf("Error\n"), exit(98);
 
-one = atoi(argv[1]);
-two = atoi(argv[3]);
-get_op = argv[2];
+	if ((argv[2][0] != '+' && argv[2][0] != '-' && argv[2][0] != '*'
+	     && argv[2][0] != '/' && argv[2][0] != '%') || strlen(argv[2]) != 1)
+		printf("Error\n"), exit(99);
 
-/* added edge case if argv[2] was longer than 1 char*/
-if (get_op_func(argv[2]) == NULL || argv[2][1] != 0)
-{
-printf("Error\n");
-exit(99);
-}
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && (atoi(argv[3]) == 0))
+		printf("Error\n"), exit(100);
 
-if ((*get_op == / || *get_op == %) && (*argv[3] == 0))
-{
-printf("Error\n");
-exit(100);
-}
-
-res = get_op_func(get_op);
-ans = res(one, two);
-
-printf("%d\n", ans);
-return (0);
+	func = get_op_func(argv[2]);
+	res = func(atoi(argv[1]), atoi(argv[3]));
+	printf("%i\n", res);
+	return (0);
 }
