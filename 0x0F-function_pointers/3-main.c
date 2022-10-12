@@ -2,48 +2,52 @@
 #include <stdio.h>
 #include "3-calc.h"
 /**
- * main - get_op_func has operators correlated with
- * func signs and funcs from op_func
- * if not 4 arguments, return Error & exit 98
- * if op is null, return Error & exit 99
- * if div or mod 0, return Error & exit 100
- * run calc, input one, operator, input two = pointer res to get_op
- * @argc: arguments
- * @argv: double pointer to arguments
+ * op_add - 5 functions
+ * @a: input one
+ * @b: input two
  * Return: 0
  */
-int main(int argc, char *argv[])
+int op_add(int a, int b)
 {
-int one, two, ans;
-int (*res)(int, int);
-char *get_op;
-
-if (argc != 4)
-{
-printf("Error\n");
-exit(98);
+	return (a + b);
 }
-
-one = atoi(argv[1]);
-two = atoi(argv[3]);
-get_op = argv[2];
-
-/* added edge case if argv[2] was longer than 1 char*/
-if (get_op_func(argv[2]) == NULL || argv[2][1] != 0)
+/**
+ * op_sub - 5 functions
+ * @a: input one
+ * @b: input two
+ * Return: 0
+ */
+int op_sub(int a, int b)
 {
-printf("Error\n");
-exit(99);
+	return (a - b);
 }
-
-if ((*get_op == / || *get_op == %) && (*argv[3] == 0))
+/**
+ * op_mul - 5 functions
+ * @a: input one
+ * @b: input two
+ * Return: 0
+ */
+int op_mul(int a, int b)
 {
-printf("Error\n");
-exit(100);
+	return (a * b);
 }
-
-res = get_op_func(get_op);
-ans = res(one, two);
-
-printf("%d\n", ans);
-return (0);
+/**
+ * op_div - 5 functions
+ * @a: input one
+ * @b: input two
+ * Return: 0
+ */
+int op_div(int a, int b)
+{
+	return (a / b);
+}
+/**
+ * op_mod - 5 functions
+ * @a: input one
+ * @b: input two
+ * Return: 0
+ */
+int op_mod(int a, int b)
+{
+	return (a % b);
 }
