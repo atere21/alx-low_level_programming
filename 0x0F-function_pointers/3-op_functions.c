@@ -1,30 +1,53 @@
-#include "3-calc.h"
-#include <stddef.h>
+#include <stdlib.h>
 #include <stdio.h>
-
+#include "3-calc.h"
 /**
- * get_op_func - Calls function to perform arithmetic operation
- * between 2 numbers bases on an operator
- * @s: operator passed as argument to the program
- *
- * Return: Nothing
+ * op_add - 5 functions
+ * @a: input one
+ * @b: input two
+ * Return: 0
  */
-int (*get_op_func(char *s))(int, int)
+int op_add(int a, int b)
 {
-op_t ops[] = {
-{"+", op_add},
-{"-", op_sub},
-{"*", op_mul},
-{"/", op_div},
-{"%", op_mod},
-{NULL, NULL}
-};
-
-int i;
-
-i = 0;
-while ((ops[i].op[0] != s[0]) && (i < 5))
-i++;
-
-return (ops[i].f);
+	return (a + b);
+}
+/**
+ * op_sub - 5 functions
+ * @a: input one
+ * @b: input two
+ * Return: 0
+ */
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+/**
+ * op_mul - 5 functions
+ * @a: input one
+ * @b: input two
+ * Return: 0
+ */
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
+/**
+ * op_div - 5 functions
+ * @a: input one
+ * @b: input two
+ * Return: 0
+ */
+int op_div(int a, int b)
+{
+	return (a / b);
+}
+/**
+ * op_mod - 5 functions
+ * @a: input one
+ * @b: input two
+ * Return: 0
+ */
+int op_mod(int a, int b)
+{
+	return (a % b);
 }
