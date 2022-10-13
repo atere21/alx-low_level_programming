@@ -14,9 +14,9 @@ typedef struct Ftype
 } ftype;
 #endif
 
-#ifndef _FUNCTIONS_H
-#define _FUNCTIONS_H
-int _putchar(char c);
+#ifndef FUNCTIONS_H
+#define FUNCTIONS_H
+int putchar(char c);
 int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
