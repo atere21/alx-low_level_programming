@@ -1,25 +1,24 @@
-#include "variadic_functions.h"
+ifndef STRUCT_H
+#define STRUCT_H
 #include <stdarg.h>
-
 /**
- * sum_them_all - Returns the sum of all its paramters.
- * @n: The number of paramters passed to the function.
- * @...: A variable number of paramters to calculate the sum of.
+ * struct Ftype - Struct op
  *
- * Return: If n == 0 - 0.
- *         Otherwise - the sum of all parameters.
+ * @tc: Parameter
+ * @tf: The function associated
  */
-int sum_them_all(const unsigned int n, ...)
+typedef struct Ftype
 {
-	va_list nums;
-	unsigned int index, sum = 0;
+	char *tc;
+	void (*tf)(va_list);
+} ftype;
+#endif
 
-	va_start(nums, n);
-
-	for (index = 0; index < n; index++)
-		sum += va_arg(nums, int);
-
-	va_end(nums);
-
-	return (sum);
-}
+#ifndef _FUNCTIONS_H
+#define _FUNCTIONS_H
+int _putchar(char c);
+int sum_them_all(const unsigned int n, ...);
+void print_numbers(const char *separator, const unsigned int n, ...);
+void print_strings(const char *separator, const unsigned int n, ...);
+void print_all(const char * const format, ...);
+#endif
