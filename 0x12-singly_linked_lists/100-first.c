@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 void msg(void)__attribute__((constructor));
-
 /**
  * msg - prints a specific message
  *
