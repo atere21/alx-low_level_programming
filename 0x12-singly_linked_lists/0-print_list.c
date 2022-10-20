@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 #include <stdio.h>
 #include "lists.h"
 #include <stddef.h>
@@ -25,4 +23,3 @@ size_t print_list(const list_t *h)
 	}
 	return (size);
 }
->>>>>>> 32c6e06e466b98458a9fa14f0e302cb4a8a22a0f
