@@ -7,7 +7,7 @@ void msg(void)__attribute__((constructor));
  *
  * Return: No return
  */
-void msg(void)
+void msg(void) __attribute__((constructor));
 {
 	printf("You're beat! and yet, you must allow,");
 	printf("\nI bore my house upon my back!\n");
