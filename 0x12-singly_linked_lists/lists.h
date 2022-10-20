@@ -8,8 +8,7 @@
  * @str: string - (malloc'ed string)
  * @len: length of the string
  * @next: points to the next node
- *
- * Description: singly linked list node structure for ALX projects. 
+ * Description: singly linked list node structure for ALX projects.
  */
 typedef struct list_s
 {
