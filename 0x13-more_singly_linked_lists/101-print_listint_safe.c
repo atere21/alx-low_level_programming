@@ -24,7 +24,7 @@ tmp = tmp->next;
 
 count++;
 
-printf([ % p] % dn, (void *)tmp2, tmp2->n);
+printf([% p] % dn, (void *)tmp2, tmp2->n);
 
 if (tmp2 <= tmp)
 {
