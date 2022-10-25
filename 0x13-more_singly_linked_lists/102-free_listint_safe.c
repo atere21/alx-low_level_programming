@@ -1,41 +1,34 @@
-#include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
 #include "lists.h"
+#include <stdlib.h>
 
 /**
- * main - check the code for Holberton School students.
+ * free_listint_safe - frees a listint_t list (can free lists with a loop)
+ * @h: pointer to head of singly linked list
  *
- * Return: Always 0.
+ * Return: the size of the list that was free’d
  */
-int main(void)
+size_t free_listint_safe(listint_t **h)
 {
-    listint_t *head;
-    listint_t *head2;
-    listint_t *node;
+	listint_t *tmp = *h, *tmp2;
+	unsigned int count = 0;
 
-    head2 = NULL;
-    add_nodeint(&head2, 0);
-    add_nodeint(&head2, 1);
-    add_nodeint(&head2, 2);
-    add_nodeint(&head2, 3);
-    add_nodeint(&head2, 4);
-    add_nodeint(&head2, 98);
-    add_nodeint(&head2, 402);
-    add_nodeint(&head2, 1024);
-    print_listint_safe(head2);
-    head = NULL;
-    node = add_nodeint(&head, 0);
-    add_nodeint(&head, 1);
-    add_nodeint(&head, 2);
-    add_nodeint(&head, 3);
-    add_nodeint(&head, 4);
-    node->next = add_nodeint(&head, 98);
-    add_nodeint(&head, 402);
-    add_nodeint(&head, 1024);
-    print_listint_safe(head);
-    free_listint_safe(&head2);
-    free_listint_safe(&head);
-    printf("%p, %p\n", (void *)head2, (void *)head);
-    return (0);
+	if (tmp == 0 || h == 0)
+		return (0);
+
+	tmp = *h;
+	while (tmp != 0)
+	{
+		tmp2 = tmp;
+		tmp = tmp->next;
+		count++;
+
+		free(tmp2);
+
+		if (tmp2 <= tmp)
+			break;
+	}
+
+	*h = 0;
+	return (count);
 }
