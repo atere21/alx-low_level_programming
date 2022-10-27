@@ -8,9 +8,10 @@
  */
 listint_t *find_listint_loop(listint_t *head)
 {
-listint_t *slow = head;
-listint_t *fast = head;
+	listint_t *slow = head;
+	listint_t *fast = head;
 
+<<<<<<< HEAD
 (NULL);
 
 while (slow && fast && fast->next)
@@ -23,6 +24,26 @@ while (slow && fast && fast->next)
 = slow->next;
 = fast->next;
 (fast);
+=======
+	if (!head)
+		return (NULL);
 
-return (NULL);
+	while (slow && fast && fast->next)
+	{
+		fast = fast->next->next;
+		slow = slow->next;
+		if (fast == slow)
+		{
+			slow = head;
+			while (slow != fast)
+			{
+				slow = slow->next;
+				fast = fast->next;
+			}
+			return (fast);
+		}
+	}
+>>>>>>> 94a9cb37cf0e2e4f4ce7cdc4816706dad49a51c7
+
+	return (NULL);
 }
