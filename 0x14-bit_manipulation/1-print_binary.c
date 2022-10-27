@@ -1,44 +1,34 @@
 #include "main.h"
 
 /**
- * rev_bin - prints binary representation of number with & and Shift Right
- * operators, but uses recursion to reverse the result
- *
- * @n: decimal number
- * @check: checks for special case number 0
- *
- * Return: No return
- */
-void rev_bin(unsigned long int n, int check)
-{
-if (check == 1)
-{
-putchar('0');
-return;
-}
-
-if (n == 0)
-return;
-
-rev_bin(n >> 1, check);
-
-if ((n & 1) == 0)
-putchar('0');
-
-if ((n & 1) == 1)
-putchar('1');
-}
-/**
- * print_binary - prints the binary representation of a number
- * @n: base 10 number
- *
- * Return: No return
- *
+ * print_binary - Entry Point
+ * @n: dec input
+ * Return: 0
  */
 void print_binary(unsigned long int n)
 {
-if (n == 0)
-rev_bin(n, 1);
-else
-rev_bin(n, 0);
+	int i = 0, count, k, temp;
+
+	if (n == 0)
+	{
+		printf("0");
+		return;
+	}
+
+	temp = n;
+
+	while (temp != 0)
+	{
+		i++;
+		temp = temp >> 1;
+	}
+
+	for (count = i - 1; count >= 0; count--)
+	{
+		k = n >> count;
+		if (k & 1)
+			printf("1");
+		else
+			printf("0");
+	}
 }
