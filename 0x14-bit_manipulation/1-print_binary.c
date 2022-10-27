@@ -23,10 +23,10 @@ return;
 rev_bin(n >> 1, check);
 
 if ((n & 1) == 0)
-_putchar('0');
+putchar('0');
 
 if ((n & 1) == 1)
-_putchar('1');
+putchar('1');
 }
 /**
  * print_binary - prints the binary representation of a number
