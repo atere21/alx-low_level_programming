@@ -1,69 +1,73 @@
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdio.h>
+#include "main.h"
+void closer(int arg_files);
+/**
+ * main - Entry Point
+ * @argc: # of args
+ * @argv: array pointer for args
+ * Return: 0
+ */
+int main(int argc, char *argv[])
+{
+	int file_from, file_to, file_from_r, wr_err;
+	char buf[1024];
+
+	if (argc != 3)
+	{
+		dprintf(2, "Usage: cp file_from file_to\n");
+		exit(97);
+	}
+
+	file_from = open(argv[1], O_RDONLY);
+	if (file_from == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+		exit(98);
+	}
+
+	file_to = open(argv[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
+	if (file_to == -1)
+	{
+		dprintf(2, "Error: Can't write to %s\n", argv[2]);
+		exit(99);
+	}
+
+	while (file_from_r >= 1024)
+	{
+		file_from_r = read(file_from, buf, 1024);
+		if (file_from_r == -1)
+		{
+			dprintf(2, "Error: Can't read from file %s\n", argv[1]);
+			closer(file_from);
+			closer(file_to);
+			exit(98);
+		}
+		wr_err = write(file_to, buf, file_from_r);
+		if (wr_err == -1)
+		{
+			dprintf(2, "Error: Can't write to %s\n", argv[2]);
+			exit(99);
+		}
+	}
+
+	closer(file_from);
+	closer(file_to);
+	return (0);
+}
 
 /**
- * main - program that copies the content of a file to another file
- *
- * @argc: Counts the number of parameters that go into main
- * @argv: Pointer of array of pointers containing strings entering main
- * Return: Always 0 on (Success)
- *
- * if the number of argument is not the correct one, exit with code 97
- * and print Usage: cp file_from file_to, followed by a new line,
- * on the POSIX standard error
- *
- * if file_from does not exist, or if you can not read it, exit with
- * code 98 and print Error: Can't read from file NAME_OF_THE_FILE,
- * followed by a new line, on the POSIX standard error
- *
- * if you can not close a file descriptor ,
- * exit with code 100 and print Error:
- * Can't close fd FD_VALUE, followed by a new line,
- * on the POSIX standard error
+ * closer - close with error
+ * @arg_files: argv 1 or 2
+ * Return: void
  */
-int main(int argc, char **argv)
+void closer(int arg_files)
 {
-int fdfrom, fdto, checkr, checkw, checkc1, checkc2;
-char buff[1024];
+	int close_err;
 
-if (argc != 3)
-dprintf(STDERR_FILENO, Usage : cp file_from file_ton), exit(97);
+	close_err = close(arg_files);
 
-fdfrom = open(argv[1], O_RDONLY);
-if (fdfrom == -1)
-{
-dprintf(STDERR_FILENO, Error : Cant read from file % s\n", argv[1]);
-exit(98);
-}
-
-fdto = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-if (fdto == -1)
-dprintf(STDERR_FILENO, "Error : Cant write to % sn, argv[2]), exit(99);
-
-
-while ((checkr = read(fdfrom, buff, 1024)) > 0)
-{
-checkw = write(fdto, buff, checkr);
-if (checkw != checkr)
-{
-dprintf(STDERR_FILENO, Error : Cant write to % s\n", argv[2]);
-exit(99);
-}
-}
-if (checkr == -1)
-{
-dprintf(STDERR_FILENO, "Error : Cant read from file % sn, argv[1]);
-exit(98);
-}
-checkc1 = close(fdfrom);
-if (checkc1 == -1)
-dprintf(STDERR_FILENO, Error : Cant close fd % d\n", fdfrom), exit(100);
-checkc2 = close(fdto);
-if (checkc2 == -1) dprintf(STDERR_FILENO, "Error : Cant close fd % dn, fdto), exit(100);
-
-return (0);
+	if (close_err == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", arg_files);
+		exit(100);
+	}
 }
