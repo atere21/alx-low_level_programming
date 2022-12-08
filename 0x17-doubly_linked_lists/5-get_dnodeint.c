@@ -1,4 +1,4 @@
-#include lists.h
+#include "lists.h"
 
 /**
  * get_dnodeint_at_index - returns the
@@ -10,23 +10,23 @@
  */
 dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 {
-unsigned int i;
+	unsigned int i;
 
-if (head == NULL)
-return (NULL);
+	if (head == NULL)
+		return (NULL);
 
-while (head->prev != NULL)
-head = head->prev;
+	while (head->prev != NULL)
+		head = head->prev;
 
-i = 0;
+	i = 0;
 
-while (head != NULL)
-{
-if (i == index)
-break;
-head = head->next;
-i++;
-}
+	while (head != NULL)
+	{
+		if (i == index)
+			break;
+		head = head->next;
+		i++;
+	}
 
-return (head);
+	return (head);
 }
