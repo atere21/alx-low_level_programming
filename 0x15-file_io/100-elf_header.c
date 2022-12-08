@@ -28,15 +28,15 @@ void _checkelf(char *h)
  */
 void _magic(char *h)
 {
-	int i;
+int i;
 
-	printf("ELF Header:\n  Magic:   ");
+printf("ELF Header:\n  Magic:   ");
 
-	for (i = 0; i < 15; i++)
-		printf("%02x ", (unsigned int)h[i]);
-	printf("%02x", (unsigned int)h[i]);
+for (i = 0; i < 15; i++)
+printf("%02x ", (unsigned int)h[i]);
+printf("%02x", (unsigned int)h[i]);
 
-	printf("\n");
+printf("\n");
 }
 /**
  * _class - print elf class
@@ -48,16 +48,16 @@ void _magic(char *h)
  */
 void _class(char *h, int x64)
 {
-	if (h[4] != 1 && h[4] != 2)
-	{
-		printf("<unknown: %02hx>\n", h[4]);
-		return;
-	}
-	printf("  %-35s", "Class:");
-	if (x64 == 0)
-		printf("ELF32\n");
-	else if (x64 == 1)
-		printf("ELF64\n");
+if (h[4] != 1 && h[4] != 2)
+{
+printf("<unknown: %02hx>\n", h[4]);
+return;
+}
+printf("  %-35s", "Class:");
+if (x64 == 0)
+printf("ELF32\n");
+else if (x64 == 1)
+printf("ELF64\n");
 }
 /**
  * _data - print elf data
@@ -68,14 +68,14 @@ void _class(char *h, int x64)
  */
 void _data(char *h)
 {
-	printf("  %-35s", "Data:");
-	printf("2's complement, ");
-	if (h[5] == 1)
-		printf("little endian\n");
-	else if (h[5] == 2)
-		printf("big endian\n");
-	else
-		printf("<unknown: %02hx>\n", h[5]);
+printf("  %-35s", "Data:");
+printf("2's complement, ");
+if (h[5] == 1)
+printf("little endian\n");
+else if (h[5] == 2)
+printf("big endian\n");
+else
+printf("<unknown: %02hx>\n", h[5]);
 }
 /**
  * _version - print elf version
@@ -86,15 +86,15 @@ void _data(char *h)
  */
 void _version(char *h)
 {
-	printf("  %-35s", "Version:");
-	if (h[6] == EV_CURRENT)
-	{
-		printf("%d (current)\n", h[6]);
-	}
-	else if (h[6] != EV_CURRENT)
-	{
-		printf("%d\n", h[6]);
-	}
+printf("  %-35s", "Version:");
+if (h[6] == EV_CURRENT)
+{
+printf("%d (current)\n", h[6]);
+}
+else if (h[6] != EV_CURRENT)
+{
+printf("%d\n", h[6]);
+}
 }
 /**
  * _os - print elf os/ABI
@@ -105,44 +105,44 @@ void _version(char *h)
  */
 void _os(char *h)
 {
-	printf("  %-35s", "OS/ABI:");
+printf("  %-35s", "OS/ABI:");
 
-	if (h[7] == 0)
-		printf("UNIX - System V\n");
-	else if (h[7] == 1)
-		printf("UNIX - HP-UX\n");
-	else if (h[7] == 2)
-		printf("UNIX - NetBSD\n");
-	else if (h[7] == 3)
-		printf("UNIX - Linux\n");
-	else if (h[7] == 4)
-		printf("UNIX - GNU Hurd\n");
-	else if (h[7] == 6)
-		printf("UNIX - Solaris\n");
-	else if (h[7] == 7)
-		printf("UNIX - AIX\n");
-	else if (h[7] == 8)
-		printf("UNIX - IRIX\n");
-	else if (h[7] == 9)
-		printf("UNIX - FreeBSD\n");
-	else if (h[7] == 10)
-		printf("UNIX - Tru64\n");
-	else if (h[7] == 11)
-		printf("UNIX - Novell Modesto\n");
-	else if (h[7] == 12)
-		printf("UNIX - OpenBSD\n");
-	else if (h[7] == 13)
-		printf("UNIX - Open VMS\n");
-	else if (h[7] == 14)
-		printf("UNIX - NonStop Kernel\n");
-	else if (h[7] == 15)
-		printf("UNIX - AROS\n");
-	else if (h[7] == 16)
-		printf("UNIX - Fenix OS\n");
-	else if (h[7] == 17)
-		printf("UNIX - CloudABI\n");
-	else
-		printf("<unknown: %02hx>\n", h[7]);
+if (h[7] == 0)
+printf("UNIX - System V\n");
+else if (h[7] == 1)
+printf("UNIX - HP-UX\n");
+else if (h[7] == 2)
+printf("UNIX - NetBSD\n");
+else if (h[7] == 3)
+printf("UNIX - Linux\n");
+else if (h[7] == 4)
+printf("UNIX - GNU Hurd\n");
+else if (h[7] == 6)
+printf("UNIX - Solaris\n");
+else if (h[7] == 7)
+printf("UNIX - AIX\n");
+else if (h[7] == 8)
+printf("UNIX - IRIX\n");
+else if (h[7] == 9)
+printf("UNIX - FreeBSD\n");
+else if (h[7] == 10)
+printf("UNIX - Tru64\n");
+else if (h[7] == 11)
+printf("UNIX - Novell Modesto\n");
+else if (h[7] == 12)
+printf("UNIX - OpenBSD\n");
+else if (h[7] == 13)
+printf("UNIX - Open VMS\n");
+else if (h[7] == 14)
+printf("UNIX - NonStop Kernel\n");
+else if (h[7] == 15)
+printf("UNIX - AROS\n");
+else if (h[7] == 16)
+printf("UNIX - Fenix OS\n");
+else if (h[7] == 17)
+printf("UNIX - CloudABI\n");
+else
+printf("<unknown: %02hx>\n", h[7]);
 }
 /**
  * _abiv - checks abi version
@@ -153,8 +153,8 @@ void _os(char *h)
  */
 void _abiv(char *h)
 {
-	printf("  %-35s", "ABI Version:");
-	printf("%d\n", h[8]);
+printf("  %-35s", "ABI Version:");
+printf("%d\n", h[8]);
 }
 /**
  * _type - print elf type
@@ -166,27 +166,27 @@ void _abiv(char *h)
  */
 void _type(char *h, int x64)
 {
-	int xtype = 17;
+int xtype = 17;
 
-	(void) x64;
+(void) x64;
 
-	if (h[5] == 1)
-		xtype = 16;
+if (h[5] == 1)
+xtype = 16;
 
-	printf("  %-35s", "Type:");
+printf("  %-35s", "Type:");
 
-	switch (h[xtype])
-	{
-	case 0:
-		printf("NONE\n");
-		break;
-	case 1:
-		printf("REL (Relocatable file)\n");
-		break;
-	case 2:
-		printf("EXEC (Executable file)\n");
-		break;
-	case 3:
+switch (h[xtype])
+{
+case 0:
+printf("NONE\n");
+break;
+case 1:
+printf("REL (Relocatable file)\n");
+break;
+case 2:
+printf("EXEC (Executable file)\n");
+break;
+case 3:
 		printf("DYN (Shared object file)\n");
 		break;
 	case 4:
